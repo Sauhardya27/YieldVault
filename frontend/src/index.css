@@ -1,0 +1,56 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	background: linear-gradient(135deg, #9716D4 0%, #341E5F 50%, #292443 100%);
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+	/* display: flex; */
+	/* justify-content: center;
+	align-items: center; */
+	/* background-color: #292443; */
+	/* Top color: #7A3E8F, middle color: #341E5F */
+}
+
+.poppins-regular {
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.custom-line {
+    width: 97%; /* or any specific width, e.g., 50% */
+    height: 4px; /* thickness of the line */
+	margin: 0 auto;
+    /* background-color: newPurple; color of the line */
+}
+
+.custom-line-1 {
+    width: 94%; /* or any specific width, e.g., 50% */
+    height: 4px; /* thickness of the line */
+	margin: 0 auto;
+    /* background-color: newPurple; color of the line */
+}
+
+.card {
+	height: 350px;
+	width: 500px;
+	border-radius: 30px;
+	margin: 70px 70px;
+}
+
+.button-1 {
+	background: linear-gradient(to right, #FF7D29, #FFB200);
+}
+
+.button-2 {
+	background: linear-gradient(to right, #0E46A3, #009FBD);
+}
+
+.header {
+	width: 60%;
+}
+
