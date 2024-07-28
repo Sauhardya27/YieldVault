@@ -8,6 +8,7 @@
 	height: 100vh;
 	margin: 0;
 	overflow: hidden;
+
 	/* display: flex; */
 	/* justify-content: center;
 	align-items: center; */
@@ -36,8 +37,6 @@
 }
 
 .card {
-	height: 350px;
-	width: 500px;
 	border-radius: 30px;
 	margin: 70px 70px;
 }
