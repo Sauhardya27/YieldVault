@@ -3,17 +3,17 @@ import React from 'react'
 const Balance = () => {
 	return (
 		<>
-			<div className='w-full flex py-1 px-32 justify-between items-center'>
-				<ul className='w-full list-none items-center flex'>
-					<li className='font-medium text-2xl text-white'>Staking balance</li>
-					<li className='ml-auto font-medium text-2xl text-white'>Reward balance</li>
+			<div className='w-full flex py-1 px-10 sm:px-32 justify-between items-center'>
+				<ul className='w-full list-none items-center flex justify-between'>
+					<li className='font-medium text-lg sm:text-2xl text-white flex-grow text-left'>Staking balance</li>
+					<li className='font-medium text-lg sm:text-2xl text-white flex-grow text-right'>Reward balance</li>
 				</ul>
 			</div>
 			<div className='custom-line bg-newPurple'></div>
-			<div className='w-full flex py-3 px-56 justify-between items-center'>
-				<ul className='w-full list-none items-center flex'>
-					<li className='font-semibold text-lg text-white'>0 USDT</li>
-					<li className='ml-auto font-semibold text-lg text-white'>0 RWD</li>
+			<div className='w-full flex py-3 px-20 sm:px-48 justify-between items-center'>
+				<ul className='w-full list-none items-center justify-between flex'>
+					<li className='font-semibold text-xs sm:text-lg text-white'>0 USDT</li>
+					<li className='font-semibold text-xs sm:text-lg text-white'>0 RWD</li>
 				</ul>
 			</div>
 		</>
