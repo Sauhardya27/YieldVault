@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { ethers } from 'ethers'
+import { logo } from '../assets';
 
 import TetherJSON from '../../../truffle_abis/Tether.json';
 const TetherABI = TetherJSON.abi;
@@ -74,7 +75,7 @@ const Navbar = () => {
 
 	return (
 		<nav className='w-full flex py-3 justify-between items-center'>
-			<img className='w-[35px] h-[35px] mr-3' src="src/assets/logo.png" alt="logo-img" />
+			<img className='w-[35px] h-[35px] mr-3' src={logo} alt="logo-img" />
 			<ul className='w-full list-none items-center flex'>
 				<li className='font-semibold text-xs text-white'>YieldVault (Decentralized Banking)</li>
 				<li className='mx-auto font-semibold text-xs text-white'>Account Nunmber: {defaultAccount}</li>

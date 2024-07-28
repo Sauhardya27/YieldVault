@@ -1,4 +1,5 @@
 import React from 'react'
+import { tetherImg } from '../assets'
 
 const Card = () => {
 	return (
@@ -14,7 +15,7 @@ const Card = () => {
 				<ul className='w-full list-none items-center flex'>
 					<li className='font-semibold text-base'>0</li>
 					<div className='flex-grow'></div>
-					<img className='w-[30px] h-[30px]' src="src/assets/tether-usdt-logo.png" alt="tether-logo" />
+					<img className='w-[30px] h-[30px]' src={ tetherImg } alt="tether-logo" />
 					<li className='ml-2 font-semibold text-base'>USDT</li>
 				</ul>
 			</div>

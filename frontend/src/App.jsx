@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Balance from './components/Balance'
 import Card from './components/Card'
+import { ethereumImg } from './assets'
 import './index.css'
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         </div>
         <div className='flex -mt-14 -ml-4'>
           <Card />
-          <img className='w-[500px] h-[500px] -mt-16 ml-auto mr-16 animate-customBounce' src="src/assets/Ethereum.png" alt="eth-img" />
+          <img className='w-[500px] h-[500px] -mt-16 ml-auto mr-16 animate-customBounce' src={ ethereumImg } alt="eth-img" />
         </div>
       </div>
 
