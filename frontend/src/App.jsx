@@ -22,7 +22,7 @@ function App() {
         </div>
         <div className='flex mt-10 sm:-mt-14 -ml-4 flex-col-reverse sm:flex-row'>
           <Card />
-          <img className='w-[350px] h-[350px] sm:w-[500px] sm:h-[500px] ml-auto mr-16 animate-customBounce -mb-10 sm:-mt-16' src={ ethereumImg } alt="eth-img" />
+          <img className='w-[350px] h-[350px] sm:w-[500px] sm:h-[500px] ml-auto sm:mr-16 animate-customBounce -mb-10 sm:-mt-16' src={ ethereumImg } alt="eth-img" />
         </div>
       </div>
 
