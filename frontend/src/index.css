@@ -5,9 +5,9 @@
 
 :root {
 	background: linear-gradient(135deg, #9716D4 0%, #341E5F 50%, #292443 100%);
-	height: 100vh;
+	min-height: 100vh;
 	margin: 0;
-	/* overflow: hidden; */
+	overflow: auto;
 
 	/* display: flex; */
 	/* justify-content: center;
@@ -44,6 +44,9 @@
 @media (min-width: 768px) {
 	.card {
 	  margin: 70px 70px;
+	}
+	:root {
+		overflow: hidden; /* Hidden for larger screens */
 	}
 }
 
