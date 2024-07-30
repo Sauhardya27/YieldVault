@@ -50,6 +50,12 @@
 	}
 }
 
+@media (min-width: 1024px) {
+	:root {
+		overflow: hidden; /* Hidden for larger screens */
+	}
+}
+
 .button-1 {
 	background: linear-gradient(to right, #FF7D29, #FFB200);
 }
