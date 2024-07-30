@@ -3,7 +3,7 @@ import { tetherImg } from '../assets'
 
 const Card = () => {
 	return (
-		<div className='h-[250px] w-[320px] sm:h-[350px] sm:w-[500px] card bg-lightPurple'>
+		<div className='h-[250px] w-[330px] sm:h-[350px] sm:w-[500px] card bg-lightPurple'>
 			<div className='w-full flex py-3 px-6 justify-between items-center'>
 				<ul className='w-full list-none items-center flex'>
 					<li className='font-semibold'>Stake tokens</li>
