@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Balance = () => {
+const Balance = ({stakingBalance, rwdBalance}) => {
 	return (
 		<>
 			<div className='w-full flex py-1 px-10 sm:px-32 justify-between items-center'>
@@ -12,8 +12,8 @@ const Balance = () => {
 			<div className='custom-line bg-newPurple'></div>
 			<div className='w-full flex py-3 px-14 sm:px-44 justify-between items-center'>
 				<ul className='w-full list-none items-center justify-between flex'>
-					<li className='font-semibold text-xs sm:text-lg text-white'>0 USDT</li>
-					<li className='font-semibold text-xs sm:text-lg text-white'>0 RWD</li>
+					<li className='font-semibold text-xs sm:text-lg text-white'>{stakingBalance} USDT</li>
+					<li className='font-semibold text-xs sm:text-lg text-white'>{rwdBalance} RWD</li>
 				</ul>
 			</div>
 		</>
