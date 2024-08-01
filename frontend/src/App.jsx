@@ -60,7 +60,8 @@ function App() {
         const decentralBankInstance = new ethers.Contract(decentralBankContractAddress, DecentralBankABI, signer);
         setDecentralBankContract(decentralBankInstance);
 
-        fetchStakingBalance(result[0], decentralBankInstance);
+        const stakingBalance = await fetchStakingBalance(result[0], decentralBankInstance);
+        setStakingBalance(stakingBalance);
       } else {
         window.alert("Please Install MetaMask!!!");
       }
