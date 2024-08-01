@@ -86,7 +86,15 @@ function App() {
   const fetchStakingBalance = async (account, decentralBankInstance) => {
     const staking_Balance = await decentralBankInstance.stakingBalance(account);
     console.log("Fetched staking balance:", ethers.formatUnits(staking_Balance, 18));
-    setStakingBalance(ethers.formatUnits(staking_Balance, 18));
+    return ethers.formatUnits(staking_Balance, 18);
+  };
+
+  const updateBalances = async () => {
+    const updatedStakingBalance = await fetchStakingBalance(defaultAccount, decentralBankContract);
+    setStakingBalance(updatedStakingBalance);
+
+    const balance = await tetherContract.balanceOf(defaultAccount);
+    setTetherBalance(ethers.formatUnits(balance, 18));
   };
 
   const stakeTokens = async (amount) => {
@@ -97,8 +105,7 @@ function App() {
     const depositTx = await decentralBankContract.depositTokens(amount);
     await depositTx.wait();
 
-    const updatedStakingBalance = await fetchStakingBalance(defaultAccount, decentralBankContract);
-    setStakingBalance(updatedStakingBalance);
+    await updateBalances();
   }
 
   const unstakeTokens = async () => {
@@ -106,11 +113,7 @@ function App() {
     const unstakeTx = await decentralBankContract.unstakeTokens();
     await unstakeTx.wait();
 
-    const updatedStakingBalance = await fetchStakingBalance(defaultAccount, decentralBankContract);
-    setStakingBalance(updatedStakingBalance);
-
-    const balance = await tetherContract.balanceOf(defaultAccount);
-    setTetherBalance(ethers.formatUnits(balance, 18));
+    await updateBalances();
   };
 
   return (
