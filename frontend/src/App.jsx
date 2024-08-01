@@ -106,7 +106,7 @@ function App() {
     await depositTx.wait();
 
     await updateBalances();
-  }
+  };
 
   const unstakeTokens = async () => {
     console.log("Unstaking tokens");
