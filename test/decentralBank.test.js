@@ -2,14 +2,16 @@ const { expect } = require("chai");
 const { ethers } = require("hardhat");
 const hre = require("hardhat");
 
+//This block describes the test suite for the DecentralBank contract.
 describe('DecentralBank', () => {
 	let tether, rwd, decentralBank;
 	let owner, customer, customerAddress;
 
 	function tokens(number) {
-		return ethers.parseEther(number.toString(), 'ether');
+		return ethers.parseEther(number.toString(), 'ether'); //This method takes the number (in ethers), converts it into string and then convert the value into wei
 	}
 
+	//This hook runs before the tests. It deploys the contracts, sets up the initial state, and transfers tokens.
 	before(async () => {
 		[owner, customer] = await ethers.getSigners();
 		customerAddress = customer.address;
@@ -26,6 +28,7 @@ describe('DecentralBank', () => {
 		await tether.connect(owner).transfer(customerAddress, tokens('100'));
 	});
 
+	//These are individual test cases that check different aspects of the DecentralBank contract.
 	it('matches name successfully', async () => {
 		const name = await tether.name();
 		expect(name).to.equal('Mock Tether Token');
